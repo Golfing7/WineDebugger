@@ -24,12 +24,12 @@ public class LightCheckerItem extends DebugItem {
             faceLightMessage.send(event.getPlayer(),
                     "BLOCK_LIGHT", shifted.getLightFromBlocks(), "SKY_LIGHT", shifted.getLightFromSky()
             );
+        } else {
+            Block playerBlock = event.getPlayer().getLocation().getBlock();
+            playerLightMessage.send(event.getPlayer(),
+                    "BLOCK_LIGHT", playerBlock.getLightFromBlocks(), "SKY_LIGHT", playerBlock.getLightFromSky()
+            );
         }
-
-        Block playerBlock = event.getPlayer().getLocation().getBlock();
-        playerLightMessage.send(event.getPlayer(),
-                "BLOCK_LIGHT", playerBlock.getLightFromBlocks(), "SKY_LIGHT", playerBlock.getLightFromSky()
-        );
     }
 
     @Override
