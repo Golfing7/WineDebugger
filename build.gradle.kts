@@ -9,6 +9,7 @@ version = "1.0-SNAPSHOT"
 repositories {
     mavenCentral()
     mavenLocal()
+    maven("https://repo.dmulloy2.net/repository/public/")
 }
 
 dependencies {
@@ -16,6 +17,7 @@ dependencies {
     compileOnly("org.projectlombok:lombok:1.18.36")
     compileOnly("com.golfing8:KCommon:1.0")
     compileOnly("net.techcable.tacospigot:WineSpigot:1.8.8-R0.2-SNAPSHOT")
+    compileOnly("com.comphenix.protocol:ProtocolLib:5.3.0")
 }
 
 tasks.test {

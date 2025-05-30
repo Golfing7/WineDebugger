@@ -2,4 +2,4 @@ name: WineDebugger
 version: 1.0
 author: Golfing8
 main: com.golfing8.wd.WineDebugger
-depend: [KCommon]
+depend: [KCommon, ProtocolLib]

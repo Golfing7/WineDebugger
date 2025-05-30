@@ -33,6 +33,10 @@ public enum DebugItemType {
                 type.cachedItem.unregister();
 
             type.cachedItem = type.supplier.get();
+            if (!rootConfig.isConfigurationSection("debug-items." + type.name())) {
+                rootConfig.createSection("debug-items." + type.name());
+                save = true;
+            }
             save |= type.cachedItem.loadValues(rootConfig.getConfigurationSection("debug-items." + type.name()));
         }
         if (save) {
