@@ -11,6 +11,7 @@ import com.golfing8.kcommon.module.Module;
 import com.golfing8.kcommon.module.ModuleInfo;
 import com.golfing8.wd.module.cmd.debug.DebugItemCMD;
 import com.golfing8.wd.module.cmd.stress.StressTestCMD;
+import com.golfing8.wd.module.cmd.test.TestCMD;
 import com.golfing8.wd.module.item.DebugItemType;
 import org.bukkit.plugin.Plugin;
 
@@ -25,6 +26,7 @@ public class DebuggerModule extends Module {
     public void onEnable() {
         addCommand(new StressTestCMD());
         addCommand(new DebugItemCMD());
+        addCommand(new TestCMD());
 
         DebugItemType.init(this);
 
